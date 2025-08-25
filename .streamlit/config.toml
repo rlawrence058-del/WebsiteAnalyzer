@@ -1,0 +1,6 @@
+[server]
+headless = true
+address = "0.0.0.0"
+enableCORS = false
+enableXsrfProtection = false
+# don't set port here; Render provides it via --server.port=$PORT
