@@ -1,0 +1,96 @@
+Create a clean, mobile-responsive, two-page website for the following local business:
+
+• Business Name: [Extract from https://{domain} or "Client Name"]
+• Business Type: {business_type} (e.g., "Plumbing Company")
+• Location: {location} (e.g., "Dallas, TX")
+
+Using the existing live site at https://{domain}, pull in all relevant content:
+  – Main headline (H1) or business name
+  – Service descriptions
+  – Contact details (phone, address, email)
+  – Logo or brand colors if available; if no logo exists, create a text-based logo using a modern font.
+
+**Folder/File structure:**
+
+/
+├── index.html
+├── blog.html
+└── posts/       # ← empty folder; blog posts will go here later
+
+---
+
+### 1. Build `index.html` (Homepage)
+
+Structure and content:
+
+1. **Hero Section**
+   – Business name or slogan as a large H1.
+   – Single call-to-action button ("Call Now" or "Get a Free Quote") with `tel:` link.
+   – Background or overlay image (use stock placeholder if none exists).
+
+2. **About Section**
+   – Short paragraph (2–3 sentences) describing the business or owner's background (pull from existing "About Us").
+   – A bullet list "Why Choose Us" (e.g., "Licensed & Insured," "24/7 Emergency Service," "Over 15 Years of Experience").
+
+3. **Services Section**
+   – List core services (e.g., "Drain Cleaning," "Water Heater Repair").
+   – For each service, include a 1–2 sentence description, pulled from the existing site.
+
+4. **Testimonials / Trust Signals (Optional)**
+   – If current site has customer reviews or star ratings, include 1–2. If none, omit.
+
+5. **Contact Section**
+   – Address (plain text), clickable phone number `<a href="tel:…">`.
+   – Simple contact form placeholder (Name, Email/Phone, Message)—styled but non-functional.
+
+6. **Footer**
+   – "© [Current Year] [Business Name]"
+   – Simple navigation links: Home, Blog, Services, Contact.
+
+**Design Guidelines for `index.html`:**
+• Use a modern sans-serif font (e.g., Montserrat or Open Sans).  
+• Keep a light background and dark text for legibility.  
+• Accent color: match existing brand color or use a complementary blue/teal if none exists.  
+• CTA button must stand out (high-contrast).  
+• All text size ≥ 16 px on mobile.  
+• Use semantic HTML5 tags only (`<section>`, `<header>`, `<footer>`, `<nav>`). Avoid deprecated tags (`<font>`, `<center>`, `<table>` for layout).
+
+---
+
+### 2. Build `blog.html` (Blog Index Page)
+
+Structure and content:
+
+1. **Header**  
+   – `<h1>Blog</h1>`  
+   – Subtitle: `<p>Latest news, tips, and updates from [Business Name]</p>`
+
+2. **Post Listing**  
+   – Use `<ol style="list-style: none; padding: 0;">`.  
+   – Initially, include a placeholder:
+     ```html
+     <li>No posts yet. Check back soon!</li>
+     ```
+   – Future posts will be `posts/post-YYYY-MM-DD-title.html` and linked here.
+
+3. **Navigation**  
+   – Include a "Back to Home" link or nav bar linking to `index.html` and `blog.html`.
+
+**Design Guidelines for `blog.html`:**
+• Match header/footer styles and accent colors from `index.html`.  
+• Center content in a container (`max-width: 800px; margin: 0 auto; padding: 20px`).  
+• Each post link (when added) appears as:
+  ```html
+  <li>
+    <a href="posts/post-2024-07-05-how-to-avoid-drain-clogs.html">How to Avoid Drain Clogs This Summer</a>
+    <span style="color: #666;">(July 5, 2024)</span>
+  </li>
+  ```
+
+### 3. Create /posts/ Folder
+
+Simply generate an empty directory named posts/.
+No files inside initially. Future blog posts go here (name format: post-YYYY-MM-DD-title.html).
+
+posts/
+  └── (empty)
